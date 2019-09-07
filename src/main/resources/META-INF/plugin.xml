@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>com.github.adamyork.intellij_redis_viewer</id>
+    <name>IntelliJ Redis Viewer</name>
+    <version>0.0.1</version>
+    <vendor email="adamyork@user.noreply.github.com" url="https://github.com/adamyork">Adam York</vendor>
+
+    <description><![CDATA[Redis connection manager and data viewer plugin.]]></description>
+
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService
+                serviceImplementation="com.github.adamyork.intellij_redis_viewer.state.StateService"/>
+        <toolWindow id="Redis Viewer" icon="/icons/pluginIcon.png" anchor="right"
+                    factoryClass="com.github.adamyork.intellij_redis_viewer.RedisToolWindowFactory"/>
+    </extensions>
+
+</idea-plugin>

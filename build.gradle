@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.9'
+}
+
+group 'com.github.adamyork'
+version '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java.srcDir 'src/main/java'
+        resources.srcDir 'src/main/resources'
+    }
+    test {
+        java.srcDir 'src/test/java'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+intellij {
+    version '2019.2'
+}
+
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
